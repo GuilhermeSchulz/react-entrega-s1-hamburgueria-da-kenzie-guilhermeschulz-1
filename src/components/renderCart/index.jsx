@@ -1,7 +1,7 @@
 import { StyledCart, StyledCartList, StyledEmptyCart, StyledHeaderCart, StyledTotalCart } from "./style";
 
 export const RenderCart = ({treatedPrice, cartItem, removeCart, removeAll}) => {
-  console.log(cartItem)
+
   return (
     <StyledCart>
       <StyledHeaderCart>
@@ -37,7 +37,7 @@ export const RenderCart = ({treatedPrice, cartItem, removeCart, removeAll}) => {
             <h3>Total:</h3>
             <p>R$ {treatedPrice}</p>
           </div>
-          <button onClick={removeAll}>Remover todos</button>
+          <button onClick={() => removeAll()}>Remover todos</button>
         </StyledTotalCart>
       ):
      ( <></>)}

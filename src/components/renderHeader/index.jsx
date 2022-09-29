@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import logo from "../../src/img/logo.png";
 import {
   StyledButton,
@@ -8,6 +9,7 @@ import {
 } from "./style";
 
 export const RenderHeader = ({setSearch, products}) => {
+  const searchFailed = () => toast.error("Nenhum Produto Encontrado")
   const searchResult = (event) => {
     const normalizedSearch = event.toLowerCase()
     const results = products.filter((element) =>{
@@ -16,6 +18,9 @@ export const RenderHeader = ({setSearch, products}) => {
     })
     event === undefined?
     setSearch(products):
+    setSearch(results)
+    results.length === 0?
+    searchFailed():
     setSearch(results)
   }
   return ( 

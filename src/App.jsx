@@ -2,6 +2,8 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import { instance } from './components/axios';
 import { RenderHomePage } from './components/renderHome';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [products, setProducts] = useState([])
@@ -21,6 +23,7 @@ function App() {
   return (
     <>
       <RenderHomePage search={search} setSearch={setSearch} products={products} cartItem={cartItem} setCartItem={setCartItem}></RenderHomePage>
+      <ToastContainer />
     </>
   );
 }
