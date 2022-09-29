@@ -8,6 +8,12 @@ export const StyledMain = styled.main`
     min-height: 85%;
     height: max-content;
     justify-content: space-between;
+    @media(min-width: 1024px){
+        flex-direction: row;
+    }
+    @media(min-width: 1500px){
+        padding: 1rem 11rem;
+    }
 `
 
 export const StyledList = styled.ul`
@@ -16,4 +22,9 @@ export const StyledList = styled.ul`
     gap: 1rem;
     padding: 1rem;
     min-height: 360px;
+    @media(min-width: 1024px){
+        flex-wrap: wrap;
+    overflow-y: auto;
+    height: 60%;
+    }
 `

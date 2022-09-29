@@ -8,6 +8,13 @@ export const StyledCart = styled.div`
     background-color: var(--grey-0);
     margin: 0 auto;
     max-width: 380px;
+    max-height: 530px;
+    margin: 0rem auto;
+    margin-top: 1rem;
+    height: 200px;
+    @media(min-width: 1024px){
+        margin-right: 1rem;
+    }
     
 `
 export const StyledHeaderCart = styled.div`
@@ -33,7 +40,6 @@ export const StyledCartList = styled.ul`
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    margin-bottom: 1rem;
     li{
         width: 100%;
         height: 80px;
@@ -82,7 +88,33 @@ export const StyledCartList = styled.ul`
             height: max-content;
             border: none;
             color: #bdbdbd;
+            
+
         }
+    }
+
+`
+export const StyledEmptyCart = styled.div`
+    background-color: var(--grey-0);
+    height: 200px;
+    padding: 1rem;
+    min-height: 20%;
+    max-height: 150px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    h2{
+        font-size: var(--title-size-3);
+        color: var(--grey-100);
+        font-weight: 700;
+    }
+    p{
+        font-weight: 600;
+            font-size: var(--title-size-4);
+            color: var(--grey-100);
     }
 `
 export const StyledTotalCart = styled.div`
@@ -120,5 +152,10 @@ export const StyledTotalCart = styled.div`
         border-radius: var(--border-radius);
         font-weight: 600;
         font-size: var(--text-size-1);
+        transition: .5s;
+        :hover{
+                background-color: var(--grey-50);
+
+            }
     }
 `

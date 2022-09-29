@@ -10,6 +10,7 @@ export const StyledHeader = styled.header`
     padding: 1rem;
     gap: 1rem;
     min-height: 100px;
+    margin-bottom: 2rem;
     @media(min-width: 1024px){
         flex-direction: row;
         justify-content: space-between;
@@ -37,6 +38,7 @@ export const StyledHeaderContainer = styled.div`
     background-color: white;
     border-radius: var(--border-radius);
     border: 1px solid var(--grey-20);
+
     @media(min-width: 1024px){
         max-width: 365px;
     }

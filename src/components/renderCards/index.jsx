@@ -2,7 +2,9 @@
 import { StyledButton } from "../renderHeader/style";
 import {  StyledImageContainer, StyledItem, StyledTextContainer } from "./style";
 
-export const RenderCard = ({ element }) => {
+export const RenderCard = ({ element, addCart }) => {
+  
+
   return (
     <StyledItem>
       <StyledImageContainer>
@@ -11,8 +13,9 @@ export const RenderCard = ({ element }) => {
       <StyledTextContainer>
         <h2>{element.name}</h2>
         <span>{element.category}</span>
-        <p>R$ {element.price}</p>
-        <StyledButton id={element.id}>Adicionar</StyledButton>
+        <p>R$ {element.price.toFixed(2).replace(".",",")}</p>
+        <StyledButton id={element.id} onClick={(event) => {event.preventDefault()
+          addCart(element)}}>Adicionar</StyledButton>
       </StyledTextContainer>
     </StyledItem>
   );

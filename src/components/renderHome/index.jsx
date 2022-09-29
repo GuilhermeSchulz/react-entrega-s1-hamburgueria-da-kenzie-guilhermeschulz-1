@@ -4,11 +4,11 @@ import { RenderMain } from "../renderMain";
 
 
 
-export const RenderHomePage = ({ products }) => {
+export const RenderHomePage = ({ search, setSearch, products, cartItem, setCartItem }) => {
   return (
     <StyledDiv>
-        <RenderHeader></RenderHeader>
-        <RenderMain products={products}></RenderMain>
+        <RenderHeader setSearch={setSearch} products={products}></RenderHeader>
+        <RenderMain search={search} cartItem={cartItem} setCartItem={setCartItem} products={products}></RenderMain>
     </StyledDiv>
   );
 };

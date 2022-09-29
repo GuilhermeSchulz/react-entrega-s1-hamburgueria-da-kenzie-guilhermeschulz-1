@@ -5,20 +5,22 @@ import { RenderHomePage } from './components/renderHome';
 
 function App() {
   const [products, setProducts] = useState([])
-
+  const [search, setSearch] = useState([])
+  const [cartItem, setCartItem] = useState([])
 
   useEffect(()=>{
     instance.get(`products`)
-    .then(response => setProducts(response.data))
+    .then(response => {
+      setProducts(response.data)
+      setSearch(response.data)
+    })
     .catch(err => console.log(err))
   }, [])
-
-console.log(products)
 
 
   return (
     <>
-      <RenderHomePage products={products} ></RenderHomePage>
+      <RenderHomePage search={search} setSearch={setSearch} products={products} cartItem={cartItem} setCartItem={setCartItem}></RenderHomePage>
     </>
   );
 }
