@@ -45,7 +45,8 @@ export const StyledCartList = styled.ul`
         height: 80px;
         display: flex;
         flex-direction: row;
-        
+        animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: .8s;
         div{
             width: 100%;
             display: flex;
@@ -88,7 +89,10 @@ export const StyledCartList = styled.ul`
             height: max-content;
             border: none;
             color: #bdbdbd;
-            cursor: pointer;
+            transition: .5s;
+            :hover{
+                color: var(--grey-50);
+            }
 
         }
         span{

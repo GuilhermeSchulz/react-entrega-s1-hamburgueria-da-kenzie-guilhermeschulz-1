@@ -4,7 +4,13 @@ export const StyledItem = styled.li`
     border: 2px solid var(--grey-20);
     border-radius: var(--border-radius);
     min-width: 300px;
-
+    animation: zoomIn;
+  animation-duration: 1s;
+  transition: .5s;
+  :hover{
+    transform: scale(1.05);
+    border: 2px solid var(--grey-50);
+  }
 `
 export const StyledImageContainer = styled.div`
     height: 50%;

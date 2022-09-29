@@ -1,4 +1,4 @@
-
+import 'animate.css';
 import { StyledButton } from "../renderHeader/style";
 import {  StyledImageContainer, StyledItem, StyledTextContainer } from "./style";
 
@@ -6,7 +6,7 @@ export const RenderCard = ({ element, addCart }) => {
   
 
   return (
-    <StyledItem>
+    <StyledItem className='animate__animated animate__zoomIn'>
       <StyledImageContainer>
         <img src={element.img} alt={element.name} />
       </StyledImageContainer>

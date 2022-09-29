@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StyledCart, StyledCartList, StyledEmptyCart, StyledHeaderCart, StyledTotalCart } from "./style";
+import 'animate.css';
 
 export const RenderCart = ({treatedPrice, cartItem, removeCart, removeAll}) => {
 
@@ -12,7 +13,7 @@ export const RenderCart = ({treatedPrice, cartItem, removeCart, removeAll}) => {
         {cartItem.length > 0?
             cartItem.map((element) => {
                 return(
-                    <li key={element.id}>
+                    <li className="animate__animated animate__slideInLeft" key={element.id}>
                         <div>
                             <div><img src={element.img} alt={element.name} /></div>
                             <h2>{element.name}</h2>
