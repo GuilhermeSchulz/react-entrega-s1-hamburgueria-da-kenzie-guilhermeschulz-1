@@ -88,8 +88,11 @@ export const StyledCartList = styled.ul`
             height: max-content;
             border: none;
             color: #bdbdbd;
-            
+            cursor: pointer;
 
+        }
+        span{
+            width: 50px;
         }
     }
 
@@ -153,6 +156,7 @@ export const StyledTotalCart = styled.div`
         font-weight: 600;
         font-size: var(--text-size-1);
         transition: .5s;
+        cursor: pointer;
         :hover{
                 background-color: var(--grey-50);
 

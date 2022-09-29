@@ -13,8 +13,9 @@ export const RenderHeader = ({setSearch, products}) => {
   const searchResult = (event) => {
     const normalizedSearch = event.toLowerCase()
     const results = products.filter((element) =>{
+      const category = element.category.toLowerCase()
       const name = element.name.toLowerCase()
-      return name.includes(normalizedSearch)
+      return name.includes(normalizedSearch) || category.includes(normalizedSearch)
     })
     event === undefined?
     setSearch(products):

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { StyledCart, StyledCartList, StyledEmptyCart, StyledHeaderCart, StyledTotalCart } from "./style";
 
 export const RenderCart = ({treatedPrice, cartItem, removeCart, removeAll}) => {
@@ -11,15 +12,14 @@ export const RenderCart = ({treatedPrice, cartItem, removeCart, removeAll}) => {
         {cartItem.length > 0?
             cartItem.map((element) => {
                 return(
-                  
                     <li key={element.id}>
                         <div>
                             <div><img src={element.img} alt={element.name} /></div>
                             <h2>{element.name}</h2>
                             <span>{element.category}</span>
                         </div>
+                        <span>{element.count}</span>
                         <button onClick={() => removeCart(element)}>Remover</button>
-                        {/* <span>1 un.</span> */}
                     </li>
                
                 )

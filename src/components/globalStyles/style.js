@@ -9,6 +9,9 @@ export const GlobalStyles = createGlobalStyle `
     font-family: 'Inter', sans-serif;
     list-style:none;
 }
+button{
+    cursor: pointer;
+}
 
 
 :root{

@@ -7,7 +7,7 @@ export const StyledMain = styled.main`
     flex-direction: column;
     min-height: 85%;
     height: max-content;
-    justify-content: space-between;
+    justify-content: flex-start;
     @media(min-width: 1024px){
         flex-direction: row;
     }
